@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo"><span class="book-symbol">📖</span> <span id="bit">BIT</span></div>
+        <marquee>Welcome to PS Portal</marquee>
+    </header>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="menu-item">☰ Dashboard</div>
+            <div class="menu-item" onclick="showCourses()">📚 Courses Registered</div>
+            <div class="menu-item">▶ Ongoing Courses</div>
+            <div class="menu-item" onclick="logout()">🔓 Logout</div>
+        </aside>
+        <main class="content">
+            <div id="initialView">
+                <img src="peacock.png" alt="Peacock" class="peacock-image">
+                <button class="login-button" onclick="login()">Login</button>
+            </div>
+            <div id="coursesView" style="display:none;">
+                <div class="test-buttons" id="testButtons" style="display:none;">
+                    <button class="btn red" onclick="showMCQ()">
+                        <span class="button-icon">📋</span> MCQ Test
+                    </button>
+                    <button class="btn violet" onclick="showOneMark()">
+                        <span class="button-icon">✏️</span> One Mark Questions
+                    </button>
+                    <button class="btn brown" onclick="showCoding()">
+                        <span class="button-icon">💻</span> Coding Assessment
+                    </button>
+                </div>
+                <div id="testArea">
+                    <!-- Test content will be loaded here -->
+                </div>
+            </div>
+        </main>
+        <aside class="info" id="info">
+            <div id="studentInfo">
+                <h3>Student Name: KANISKAR</h3>
+                <h3>Marks: 85</h3>
+            </div>
+        </aside>
+    </div>
+    <div id="timer"></div>
+    <script src="scrip.js"></script>
+</body>
+</html>
